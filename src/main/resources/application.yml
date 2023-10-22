@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: 'finsavior-config-server'
+  cloud:
+    config:
+      name: '${spring.application.name}'
+      server:
+        bootstrap: true
+        git:
+          skipSslValidation: true
+          uri: https://github.com/Hachibitz/finsavior-config.git #TODO
+          username:  #TODO
+          password:  #TODO
+          basedir: '${user.home}/${spring.application.name}/default'
+          force-pull: true
+          clone-on-start: true
