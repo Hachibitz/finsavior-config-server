@@ -8,9 +8,12 @@ spring:
         bootstrap: true
         git:
           skipSslValidation: true
-          uri: https://github.com/Hachibitz/finsavior-config.git #TODO
-          username:  #TODO
-          password:  #TODO
+          uri: https://github.com/Hachibitz/finsavior-cloud-properties.git
+          username:  ${TOKEN}
+          password:  ${TOKEN}
           basedir: '${user.home}/${spring.application.name}/default'
           force-pull: true
           clone-on-start: true
+
+server:
+  port: 8084
