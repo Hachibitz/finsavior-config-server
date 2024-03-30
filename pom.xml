@@ -8,11 +8,12 @@
 		<version>3.1.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>finsavior</artifactId>
+	<groupId>br.com.finsavior.config.server</groupId>
+	<artifactId>finsavior-configserver</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-cloud-config</name>
 	<description>Finsavior config server</description>
+	<packaging>jar</packaging>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.4</spring-cloud.version>
@@ -27,6 +28,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>3.2.3</version>
 		</dependency>
 	</dependencies>
 	<dependencyManagement>
