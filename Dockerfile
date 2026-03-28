@@ -1,7 +1,13 @@
-FROM openjdk:17-jdk-slim
+# Dockerfile do Config-Server
+FROM eclipse-temurin:17-jre-alpine
 
 WORKDIR /app
 
-COPY target/finsavior-configserver-0.0.1-SNAPSHOT.jar app.jar
+# Copia o JAR do config-server
+COPY build/libs/*-SNAPSHOT.jar app.jar
 
-CMD ["java", "-jar", "app.jar"]
+ENV TZ=America/Sao_Paulo
+
+EXPOSE 8084
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
