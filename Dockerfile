@@ -4,7 +4,7 @@ FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 
 # Copia o JAR do config-server
-COPY build/libs/*-SNAPSHOT.jar app.jar
+COPY target/*.jar app.jar
 
 ENV TZ=America/Sao_Paulo
 
